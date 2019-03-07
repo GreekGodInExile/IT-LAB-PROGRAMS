@@ -1,0 +1,50 @@
+
+h2{font-family:cursive; font-size:300%; text-align:center; color:red;}
+
+h1{background-color:hsla(9, 100%, 64%, 0.5);text-align:right; color:white; opacity:0.7;}
+
+span{color:red;}
+
+div{background-color:black; color:white; padding:20px; opacity:0.7;}
+p.dotted {border-style: dotted;margin:25px 50px 75px 100px}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;border-color: red green blue yellow; border-radius:500px;padding: 75px 50px 50px 100px;}
+p.double {border-style: double;border-width: 2px 10px 4px 20px;}
+p.groove {border-style: groove;}
+p.ridge {border-left: 6px solid red; background-color:lightgrey;}
+p.inset {display:none; background-color:black; border-style: inset; padding:20px;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+p.groove::first-line {background-color:orange; color:white; font-variant:small-caps;}
+p.groove::selection{ color:red; background-color:black;}
+p.groove::before{content:url("/home/section1/2016cse023/apun-hi-bhagwan-hai-artwork.png");}
+
+div {background-color:#4CAF50; width:300px; margin: auto;padding:25px; border: 5px solid black;}
+DIV.FIRST{OPACITY:0.1;}
+DIV.SECOND{OPACITY:0.2;}
+DIV.THIRD{OPACITY:0.3;}
+div.div2:hover p.inset{ display:block;}
+li{display:inline-block; padding:5px}
+
+a:link {color:white; background-color:red; text-align:center; padding:5px 5px; text-decoration:none}
+a:visited {color:blue; background-color:cyan;}
+a:hover {color:red; background-color:lightgreen;}
+a:active {color:orange; background-color:hotpink;}
+
+#id1 {width:300px; border: 25px solid green; padding:25px; margin:25px;}
+
+
+img:hover { opacity:0.0; filter:alpha(opacity=100); }
+
+#diiv { width:100px;
+	height:100px
+	background-color:red;
+	animation-name:example;
+	animation-duration:4s;
+	}
+@keyframes example {
+	from {background-color:red;}
+	to {background-color:yellow;}
+}

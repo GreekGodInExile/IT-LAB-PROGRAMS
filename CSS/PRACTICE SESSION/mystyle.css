@@ -1,0 +1,23 @@
+body { background-color:linen; background-image:url("/home/section1/2016cse023/bleh.png"); background-repeat:repeat-y; font-size: 20px;}
+p {padding:50px; font-style:"italic"; text-transform:capitalize; }
+p, h1 {color:red;}
+p.dotted {border-style: dotted; border-color:red; border-width:4px}
+p.highlight:hover{ color:aqua;}
+p.dotted::first-letter{color:red; font-size:xx-large;}
+p.dashed {border-style: solid; border-color:green; border-width:10px}
+h1 {background-color: aqua; margin-left:20px; width:50%; text-transform:uppercase; font-size:3em; text-shadow:2px 2px 8px red;}
+h1.singlemarg {background-color:aqua; margin:50px 25px 50px 25px}
+#para1 { color:blue;}
+p.colortext {color:green;}
+div {background-color:#4CAF50; width:200px; margin: auto;padding:25px; border: 25px solid navy; border-radius:35px; box-shadow:10px 10px 8px red}
+div > p {background-color:#4CAF50; width:200px; margin: auto;padding:25px; border: 25px solid navy;}
+a:link {color:red; background-color:aqua; text-align:center; padding:5px 5px; text-decoration:none}
+a:visited {color:blue; background-color:aqua;}
+a:hover {color:aqua; background-color:yellow;}
+a:active {color:orange; background-color:yellow;}
+table.tab1, th, td{border-style:solid; border-width:2px; border-color:green;}
+table.tab2{border-collapse:collapse;}
+hr {opacity:0.0;}
+img.bottom {opacity:0.7;}
+img.bottom:hover { opacity:0.1; filter:alpha(opacity=100); }
+img.right {margin-left:780px;}
