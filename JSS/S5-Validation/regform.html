@@ -1,0 +1,83 @@
+<html>
+<head>
+<script type="text/javascript">
+function validation()
+{
+	var name=document.forms["regform"]["f_name"];
+	var address=document.forms["regform"]["addr"];
+	var email=document.forms["regform"]["mail"];
+	var password=document.forms["regform"]["psw"];
+	var telephone=document.forms["regform"]["tele"];
+	var sub=document.forms["regform"]["courses"];
+
+	if(name.value=="")
+	{
+		window.alert("Please input your name!!");
+		name.focus();
+		return false;
+	}
+	if(address.value=="")
+	{
+		window.alert("Please input your address!!");
+		address.focus();
+		return false;
+	}
+	if(email.value=="")
+	{
+		window.alert("Please input your email!!");
+		email.focus();
+		return false;
+	}
+	if(password.value=="")
+	{
+		window.alert("Please input your password!!");
+		password.focus();
+		return false;
+	}
+	if(telephone.value=="")
+	{
+		window.alert("Please input your telephone number!!");
+		telephone.focus();
+		return false;
+	}
+	if(sub.selectedIndex < 1)
+	{
+		window.alert("Please select your course!!");
+		sub.focus();
+		return false;
+	}
+};
+			
+</script>
+</head>
+<body bgcolor="lightblue">
+<center><h3>REGISTRATION FORM</h3>
+<form name="regform" action="/submit.php" onsubmit="return validation()" method="post">
+<p>Name:<input type="text" name="f_name" size=45 /></p>
+<br>
+<p>Adress:<input type="text" name="addr" size=45 /></p>
+<br>
+<p>Email:<input type:"email" name="mail" size=45 /></p>
+<br>
+<p>Password:<input type:"password" name="psw" size=45/></p>
+<br>
+<p>Telephone number:<input type:"number" name="tele" size=45/></p>
+<br>
+<p><span style="color:red">SELECT YOUR COURSE:</span><select name="courses">
+	<option value="btech" Selected>BTECH</option>
+	<option value="law">LAW</option>
+	<option value="mangemnt">MANGMNT</option>
+</select></p>
+<br>
+<br>
+<br>
+<p>Comments:<textarea rows=4 cols=45>
+	Enter comments here...
+</textarea></p>
+<br>
+<p><input type="submit" value="Submit" name="submit">
+<input type=reset value=Reset name="reset"></p>
+</form>
+</center>
+</body>
+</html>
