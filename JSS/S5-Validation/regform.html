@@ -28,6 +28,18 @@ function validation()
 		email.focus();
 		return false;
 	}
+	if(email.value.indexOf("@",0)<0)
+	{
+		window.alert("Please input your valid email!!");
+		email.focus();
+		return false;
+	}
+	if(email.value.indexOf(".",0)<0)
+	{
+		window.alert("Please input your valid email!!");
+		email.focus();
+		return false;
+	}
 	if(password.value=="")
 	{
 		window.alert("Please input your password!!");
