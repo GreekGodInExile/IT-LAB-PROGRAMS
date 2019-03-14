@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			function validation()
+			{
+				var name=document.getElementById("name").value;
+				var age=document.getElementById("age").value;
+				var gender=document.getElementsByName("gender");
+				var address=document.getElementById("ad").value;
+				var e=document.getElementById("state");
+				var strUsr=e.options[e.selectedIndex].value;
+				var no=document.getElementById("mob").value;
+				var x=document.getElementbyId("mail").value;
+
+				if(name="")
+				{
+					alert("Name feild empty!!");
+					return false;
+				}
+				else
+				{
+					for(i=0; i<name.length;i++)
+						if(!(name.charAt(i)>='a'&&name.charAt(i)<='z')||(name.charAt(i)>='A'&&name.charAt(i)<='Z'))
+						{
+							alert("Enter Alphabets only in the name feild!");
+							return false;
+						}
+				}
+				if(name.length<6)
+				{
+					alert("Enter Username greater than 5!!");
+					return false;
+				}
+				if(age=="")
+				{
+					alert("Age feild empty");
+					return false;
+				}
+				if(age<1||age>120)
+				{
+					alert("enter age correctly!");
+					return false;		
+				}
+				else
+				{
+					for(i=0; i<age.length;i++)
+						if(!(age.charAt(i)>='0'&&name.charAt(i)<='9')
+						{
+								alert("Enter Age in numbers!");
+						}
+				}
+				if((gender[0].checked==false)&&(gender[1].checked==false)
+				{
+					alert("Please choose a gender you're not an anju!");
+					return false;
+				}
+				if(address=="")
+				{
+					alert("Address left empty");
+					return false;
+				}
+				if(strUsr==0)
+				{
+					alert("Please slelct your state");
+					return false;	
+				}
+				if(mob=="")
+				{
+					alert("fill mobile number!");
+					return false;
+				}
+				if(mob.length>10||mob.length<10)
+				{
+					alert("Invalid mobile number!");
+					return false;
+				}
+				else
+				{
+					for(i=0; i<mob.length; i++)
+						if(!(mob.charAt(i)>='0'&&mob.charAt(i)<='9'))
+						{
+							alert("Enter valid mobile number");
+							return false;
+			};
+		</script>
+	</head>
+	<body bgcolor="lightyellow">	
+	
+		<center><h3>REGISTRATION FORM</h3>
+		<form name="regform" action="/submit.php" onsubmit="return validation()" method="post">
+		<p>Name:<input type="text" name="f_name" size=45 /></p>
+		<br>
+		<p>Age:<input type="text" name="age" size=45 /></p>
+		<br>
+		<p>Gender: <input type="radio" name="gender" value="male" checked>male <input type="radio" name="gender" value="female">Female<br></p>
+		<br>
+		<p>Address:<textarea rows=4 cols=45 name="ad">
+		Enter Address here...
+		</textarea></p>
+		<br>
+		<p><span style="color:red">State:</span><select name="state">
+			<option value="0" Selected>Select</option>
+			<option value="1">Kerala</option>
+			<option value="2">Karnataka</option>
+			<option value="3">AndraPradesh</option>
+			<option value="4">TamilNadu</option>
+		</select></p>
+		<br>
+		<p>Mobile Number:<input type="number" name="mob" size=45 /></p>
+		<br>
+		<br>
+		<p>Email:<input type="email" name="email" size=45 /></p>
+		<br>
+		<br>
+		<p><input type="submit" value="Sign up" name="submit">
+		</center>
+		</form>
+	</body>
+</html>
