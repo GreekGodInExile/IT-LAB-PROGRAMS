@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>JS3</title>
+	<style>
+	body {
+		background-color: yellow;
+	}
+	p {
+		width:100px;
+	}
+	</style>
+	<script type="text/JavaScript">
+		function sum(a, b) {
+			var sum = Number(a) + Number(b);			//parseInt(a)+parseInt(b)
+			document.getElementById("result2").innerHTML = "Result is = "+sum;
+		}
+	</script>
+<head/>
+<body>
+	<br />
+	Number 1 : <input type="number" name="x" id="x" placeholder="Enter a number">
+	<br />
+	Number 2 : <input type="number" name="y" id="y" placeholder="Enter a number">
+	<br />
+	<button onclick="sum(document.getElementById('x').value,document.getElementById('y').value)">Print sum</button>
+	<br>
+	<p id="result2"></p>
+</body>
+
+</html>
