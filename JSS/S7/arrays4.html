@@ -1,0 +1,51 @@
+<html>
+<head>
+</head>
+<body bgcolor="lightyellow">
+	<p id="result" style="background-color:aqua;"></p>
+	<script type="text/javascript">
+	function CreateMultiArray()
+	{
+	
+		MultiArray = new Array(5)
+		
+		MultiArray [0] = new Array(2)
+		
+		MultiArray [0][0] = prompt("Enter 00 element:");
+		
+		MultiArray [0][1] = prompt("Enter 01 element");
+		
+		MultiArray [1] = new Array(2)
+		
+		MultiArray [1][0] = prompt("Enter 10 element");
+		
+		MultiArray [1][1] = prompt("Enter 11 element");
+		
+		MultiArray [2] = new Array(2)
+		
+		MultiArray [2][0] = prompt("Enter 20 element");
+		
+		MultiArray [2][1] = prompt("Enter 21 element");
+		
+		MultiArray [3] = new Array(2)
+		
+		MultiArray [3][0] = prompt("Enter 30 element");
+		
+		MultiArray [3][1] = prompt("Enter 31 element");
+		
+		MultiArray [4] = new Array(2)
+		
+		MultiArray [4][0] = prompt("Enter 40 element");
+		
+		MultiArray [4][1] = prompt("Enter 41 element");
+		
+	}
+		CreateMultiArray();
+		for(i=0; i<5; i++)
+			for(j=0; j<2; j++)
+				document.getElementById("result").innerHTML = MultiArray;
+	}
+</script>
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>js arrays</title>
+</head>
+<body bgcolor="lightyellow">
+	<p id="result" style="background-color:aqua;"></p>
+	<p id="result1" style="background-color:lightpink;"></p>
+	<script>
+		var arr = new Array();
+		var i, j, temp;
+		var linebreak= "<br/>";
+		for(i=0;i<5;i++) {
+			arr[i] = parseInt(prompt("Enter a Number :"));
+		}
+		document.getElementById("result").innerHTML = arr;
+		function add(B)
+		{
+			for(i=0; i<5; i++)
+				document.write(B[i]);
+				document.write(linebreak);
+		}
+		add(arr);
+	</script>
+</body>
+</html>

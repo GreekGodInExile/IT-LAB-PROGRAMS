@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>js arrays</title>
+</head>
+<body bgcolor="lightyellow">
+	<p id="result" style="background-color:aqua;"></p>
+	<p>After sorting</p>
+	<p id="result2" style="background-color:lightblue;"></p>
+	<p>After search result</p>
+	<p id="result3" style="background-color:lightgreen;"></p>
+	<script>
+		var arr = new Array();
+		var i, j, temp;
+		for(i=0;i<5;i++) {
+			arr[i] = parseInt(prompt("Enter a Number :"));
+		}
+		document.getElementById("result").innerHTML = arr;
+		for(i=0;i<4;i++) {
+			for(j=0;j<5-i-1;j++) {
+				if(arr[j] > arr[j+1]) {
+					temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+				}
+			}
+		}
+		document.getElementById("result2").innerHTML = arr;
+		var key = parseInt(prompt("Enter a Key element :"));
+		for(i=0;i<5;i++) {
+			if(arr[i]==key){
+				document.getElementById("result3").innerHTML = "key at position " +i;
+			}
+			else {
+				document.getElementById("result3").innerHTML="Element not found";
+		}
+	</script>
+</body>
+</html> 

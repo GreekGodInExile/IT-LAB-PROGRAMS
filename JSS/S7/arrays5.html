@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>js arrays</title>
+</head>
+<body>
+	<p id="result"></p>
+	<script>
+		var arr = new Array([2][2]);
+		for(i=0;i<=2;i++) 
+		{	arr[i] = new Array();
+			for(j=0;j<=2;j++)
+			{
+			arr[i][j]= parseInt(prompt("Enter a Number :"));
+			}
+		}
+		document.getElementById("result").innerHTML = arr;
+	</script>
+</body>
+</html> 
