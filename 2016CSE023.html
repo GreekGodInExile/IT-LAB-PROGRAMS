@@ -1,0 +1,126 @@
+<html>
+<head>
+<script type="text/javascript">
+function validation()
+{
+	var name=document.forms["regform"]["name"];
+	var age=document.getElementById("age").value;
+	var gender=document.getElementsByName("gender");
+	var year=document.forms["regform"]["year"];
+	var address=document.forms["regform"]["addr"];
+	var mob=document.getElementById("mob").value;
+	var e=document.getElementById("states");
+	var Usr=e.options[e.selectedIndex].value;
+	var email=document.forms["regform"]["mail"];
+	var uid=document.forms["regform"]["uid"];
+	var password=document.forms["regform"]["pwd"];
+	var cpassword=document.forms["regform"]["cpwd"];
+	
+if(name.value=="")
+	{
+		window.alert("Please input your name!!");
+		name.focus();
+		return false;
+	}
+if(name.length<3 || name.length>10)
+	{
+		window.alert("Please input within the boundaries of 3 and 10");
+		name.focus();
+		return false;
+	}
+
+if(age=="")
+{
+	alert("Age field empty");
+	return false;
+}
+if(age<20||age>80)
+{
+	alert("enter age correctly!");
+	return false;		
+}
+else
+{
+for(i=0; i<age.length;i++)
+	if(!(age.charAt(i)>='0'&&name.charAt(i)<='9')
+		{
+			alert("Enter Age in numbers!");
+		}
+}
+if((gender[0].checked==false)&&(gender[1].checked==false)&&(gender[2].checked==false))
+{
+	alert("Please choose a gender!!");
+	return false;
+}
+if(mob=="")
+{
+	alert("fill mobile number!");
+	return false;
+}
+if(mob.length>10||mob.length<10)
+{
+	alert("Invalid mobile number!");
+	return false;
+}
+else
+{
+	for(i=0; i<mob.length; i++)
+		if(!(mob.charAt(i)>='0'&&mob.charAt(i)<='9'))
+			{
+				alert("Enter valid mobile number");
+				return false;
+			}
+}
+if(strUsr==0)
+{
+	alert("Please select your state");
+	return false;	
+}
+	
+if(mail.value=="")
+	{
+		window.alert("Please input your name!!");
+		mail.focus();
+		return false;
+	}
+}
+</script>
+</head>
+<body bgcolor="lightyellow">
+<center><h3>REGISTRATION FORM</h3>
+<form name="regform" action="/submit.php" onsubmit="return validation()" method="post">
+<p>Name:<input type="text" name="name" placeholder="Fullname" size=45/></p>
+<br>
+<p>Age:<input type="text" name="age" placeholder="Age" size=45/></p>
+<br>
+<p>Gender:<input type="radio" name="gender" value="male" checked>Male<input type="radio" name="gender" value="female">Female<input type="radio" name="gender" value="other">Other<br></p>
+<br>
+<p>Year Of birth:<input type="number" name="year" placeholder="Year" size=45></p>
+<br>
+<p>Address:<textarea name="addr" rows="3" cols="15">
+Enter address here.
+</textarea>
+</p>
+<br>
+<p>Mobile Number:<input type="text" name="mob" size=45 /></p>
+<br>
+<p>State:<select name="states">
+	<option value="1" Selected>Karnataka</option>
+	<option value="2">AndraPradesh</option>
+	<option value="3">TamilNadu</option>
+</select></p>
+<br>
+<p>Email:<input type="email" name="mail" placeholder="valid mail ID" size=45></p>
+<br>
+<p>UID:<input type="email" name="uid" size=45></p>
+<br>
+<p>Password:<input type="password" name=pwd size=45></p>
+<br>
+<p>Confirm password:<input type="password" name=cpwd size=45></p>
+<br>
+<p><input type="submit" value="Submit" name="submit">
+<input type="reset" value="Reset" name="reset"></p>
+</form>
+</center>
+</body>
+</html>
