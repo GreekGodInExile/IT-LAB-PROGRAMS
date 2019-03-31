@@ -88,17 +88,17 @@
 	
 		<center><h3>REGISTRATION FORM</h3>
 		<form name="regform" action="/submit.php" onsubmit="return validation()" method="post">
-		<p>Name:<input type="text" name="f_name" size=45 /></p>
+		<p>Name:<input type="text" id="f_name" size=45 /></p>
 		<br>
-		<p>Age:<input type="text" name="age" size=45 /></p>
+		<p>Age:<input type="text" id="age" size=45 /></p>
 		<br>
 		<p>Gender: <input type="radio" name="gender" value="male" checked>male <input type="radio" name="gender" value="female">Female<br></p>
 		<br>
-		<p>Address:<textarea rows=4 cols=45 name="ad">
+		<p>Address:<textarea rows=4 cols=45 id="ad">
 		Enter Address here...
 		</textarea></p>
 		<br>
-		<p><span style="color:red">State:</span><select name="state">
+		<p><span style="color:red">State:</span><select id="state">
 			<option value="0" Selected>Select</option>
 			<option value="1">Kerala</option>
 			<option value="2">Karnataka</option>
@@ -106,13 +106,14 @@
 			<option value="4">TamilNadu</option>
 		</select></p>
 		<br>
-		<p>Mobile Number:<input type="number" name="mob" size=45 /></p>
+		<p>Mobile Number:<input type="number" id="mob" size=45 /></p>
 		<br>
 		<br>
-		<p>Email:<input type="email" name="email" size=45 /></p>
+		<p>Email:<input type="email" id="email" size=45 /></p>
 		<br>
 		<br>
 		<p><input type="submit" value="Sign up" name="submit">
+			<input type="reset" value="Reset" name="reset"></p>
 		</center>
 		</form>
 	</body>
