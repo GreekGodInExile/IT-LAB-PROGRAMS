@@ -1,2 +1,2 @@
 # IT-LAB-PROGRAMS
-just programs donw in internet technologies lab
+just programs done in internet technologies lab
