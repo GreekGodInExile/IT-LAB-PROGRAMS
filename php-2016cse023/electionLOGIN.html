@@ -1,0 +1,86 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login</title>
+	<style type="text/css" media="screen">
+	body {
+			background-color:beige;
+			margin:0;
+			padding:0;
+		}
+		
+	p {
+			font-size:30px;
+		}
+		
+	</style>
+</head>
+<body>
+	<center>
+		<p id="temp">CR ELECTION</p>
+ 		<form action="electionLOGIN.php" method="post" onsubmit="return ValidateForm()" name="login">		
+		<table border="0" cellspacing="0" cellpadding="0" bgcolor=lightgreen width=450px style="margin-top:40px;">
+			
+				<tr>
+					<td width=100px height=100px align=right style="color:white;">UID : </td>
+					<td width=100px height=50px align=center><input type="text" id="uid" name='uid'/></td>
+				</tr>
+				
+				<tr>
+					<td width=100px height=50px  align=right style="color:white;">PWD : </td>
+					<td width=100px height=50px align=center><input type="password" id="pwd" name="pwd" /></td>
+				</tr>
+			
+				<tr>
+					<td colspan=2 width=50px height=100px align=center><input type="submit" value="Submit" id="sub" name="sub"/></td>
+				</tr>
+				
+				
+			</table>
+			
+		</form>
+	
+		
+		
+	</center>
+	
+	
+	
+	<script type="text/javascript">
+		
+		function ValidateForm() {
+			
+			var x=0;
+			
+			var uid=document.forms['login']['uid'];
+			var pwd=document.forms['login']['pwd'];
+			
+			if(x>3) {
+				alert("No more Entries");
+				return false;
+			}
+			
+			if(uid.value=="") {
+				alert("Enter name");
+				uid.focus();
+				return false;
+				x++;
+			}
+			
+	
+			
+			if(pwd.value=="") {
+				alert("Enter password");
+				pwd.focus();
+				return false;
+				x++;
+			}
+		
+			
+			return true;
+		}
+		
+	</script>
+	
+</body>
+</html>
