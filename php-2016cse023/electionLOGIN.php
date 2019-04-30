@@ -31,6 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 //Syntax to jump to another page
 						header('location:electionCANDIDATE.html');
 					}
+					if($row['profile']==0)
+					{
+//Syntax to jump to another page
+						header('location:electionVOTE.php');
+					}
 				}
 			}
 			mysqli_free_result($res);	
