@@ -1,4 +1,5 @@
 <?php
+SESSION_START();
 $db_host='localhost';
 $db_user='root';
 $db_passwd='root';
@@ -14,6 +15,7 @@ if(!$con){
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$uid=$_POST['uid'];
 	$pwd=$_POST['pwd'];
+	$_SESSION['user']=$uname;
 
 	echo $uid;
 	echo $pwd;
@@ -31,10 +33,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 //Syntax to jump to another page
 						header('location:electionCANDIDATE.html');
 					}
-					if($row['profile']==0)
+					if(($row['profile']==0) && ($row['voted']!=0));
 					{
 //Syntax to jump to another page
 						header('location:electionVOTE.php');
+					}	
+					if(($row['profile']==2) && ($row['voted']!=0))
+					{
+						header('location:electionRESULT.php');
+					}
+					if(($row['profile']==2) && ($row['voted']!=0))
+					{
+						header('location:electionVOTE.php');
+					}
+					else
+            		{
+							echo "You've already Voted thankyou!!!";
 					}
 				}
 			}

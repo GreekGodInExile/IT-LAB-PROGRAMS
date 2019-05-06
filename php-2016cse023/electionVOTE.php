@@ -12,6 +12,9 @@ if(!$con){
 }
 $sql= "select * from candidate";
 $res=mysqli_query ($con, $sql) or die ("Error Querying the database!!");
+$S=$_SESSION ['user'];
+$qwe="update login set voted =1 where UID='$S'";
+mysqli_query($con , $qwe);
 echo '<form id="myform" action="updateVOTE.php" method="post">';
 echo "<table>";
 echo "<tr>";
