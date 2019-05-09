@@ -1,0 +1,22 @@
+<html>
+<body bgcolor="lightblue">
+<script>
+	function ajax() {
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange=function() {
+			if(this.readyState==4 && this.status==200)	{
+				document.getElementById("ajax_content").innerHTML=this.responseText;
+			}
+		};
+		xhttp.open("GET", "surprise.html", true);
+		xhttp.send();
+		document.getElementById('reveal').style.display='none';			
+	}
+</script>
+<center>
+<h1 style="color:red"> Today's your special day!!</h1>
+<button id="reveal" onclick=ajax() class="button">Why's That?</button>
+<div id= "ajax_content">
+</div>
+</body>
+</html>

@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					{
 						header('location:electionRESULT.php');
 					}
-					if(($row['profile']==2) && ($row['voted']!=0))
+					if(($row['profile']==2) && ($row['voted']==0))
 					{
 						header('location:electionVOTE.php');
 					}

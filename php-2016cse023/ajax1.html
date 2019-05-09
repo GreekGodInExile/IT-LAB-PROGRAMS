@@ -1,0 +1,26 @@
+<html>
+<body>
+<script>
+function shownamelist(name) {
+	if (name=="") { document.getElementById
+("shownamelist").innerHTML=""; }
+else  {
+	var qwe=new XMLHttpRequest();
+	qwe.onreadystatechange=function() {
+	if(this.readyState==4 && this.status==200) {
+		document.getElementById("shownamelist").innerHTML=this.responseText;
+		}
+	};
+	qwe.open("GET", "retrieve.php?q="+name, true);
+	qwe.send();
+	}
+}
+</script>
+<form>
+<h1>Name list display</h1>
+<input type =text name="name" onkeyup="shownamelist(this.value)"/>
+</form>
+<div id="shownamelist">
+</div>
+</body>
+</html>
