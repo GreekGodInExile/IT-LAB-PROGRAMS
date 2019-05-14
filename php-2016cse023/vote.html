@@ -1,0 +1,23 @@
+<html><body>
+<script>
+function showcandidate(name) {
+	if (name=="") { document.getElementById
+("shownamelist").innerHTML=""; }
+else  {
+	var qwe=new XMLHttpRequest();
+	qwe.onreadystatechange=function() {
+	if(this.readyState==4 && this.status==200) {
+		document.getElementById("displaycandidate").innerHTML=this.responseText;
+		}
+	};
+	qwe.open("GET", "electionVOTE.php",  true);
+	qwe.send();
+	}
+}
+</script>
+<h1>Candidate list</h1>
+<form><input type = button value="~ShowCandidates~" onclick="showcandidate()"/>
+</form>
+<div id="displaycandidate">
+</div>
+</body></html>
